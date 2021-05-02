@@ -26,7 +26,7 @@ class Scene2 extends Phaser.Scene {
 		this.spears = []
 
 		gSettings.playerSpeed = 0
-		gSettings.maxSpears = 2
+		gSettings.maxSpears = 10
 	}
 
 	update(){
