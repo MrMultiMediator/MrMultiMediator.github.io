@@ -86,6 +86,7 @@ class Scene2 extends Phaser.Scene {
 				//set velocity to the average
 				if (spearVx > -5){
 					spearVx = -gSettings.spearAvgVel;
+					console.log("Setting velocity to average.")
 				}
 
 				//Add new spear
