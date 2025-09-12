@@ -1,15 +1,162 @@
-
 <!DOCTYPE html>
-<head style="color:red";>
-The GitHub pages page of MrMultimediator! <br/>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MrMultiMediator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E0B0FF; /* Mauve background */
+            color: black;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: transparent; /* Mauve background */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: none;
+        }
+        h1 {
+            color: #333;
+        }
+        .collapsible-header {
+            background-color: #C090D0;
+            color: black;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+        }
+        .active, .collapsible-header:hover {
+            background-color: #A070B0;
+        }
+        .collapsible-content {
+            padding: 0 18px;
+            display: none;
+            background-color: #E0B0FF;
+        }
+        .arrow {
+            display: inline-block;
+            margin-right: 10px;
+            transition: transform 0.2s;
+            width: 0;
+            height: 0;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-left: 6px solid black;
+        }
+        .header-active .arrow {
+            transform: rotate(90deg);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .tooltip-container {
+            position: relative;
+            display: block;
+        }
+        .tooltip-text {
+            visibility: hidden;
+            width: 200px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip-container:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+            .collapsible-content li:hover {
+            background-color: #C090D0;
+        }
+    </style>
 </head>
-<body style="background-color:black";>
-<br/> <a href="https://mrmultimediator.github.io/Dodge_Lasers">Play Dodge Lasers!</a>
-  <p style="color:#39ff14";> Dodge lasers is a JavaScript game that uses the phaser library <br />
-  Hold the spacebar to accelerate the craft upwards. Release to accelerate <br />
-  downwards due to gravity.</p>
-<br/> <a href="https://mrmultimediator.github.io/dawatoma">dawatoma documentation</a>
-  <p style="color:#39ff14";> dawatoma: A python package that allows the acceleration of creative
-  tasks that often take place in a DAW. <br /> </p>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to MrMultiMediator's Page</h1>
+        </header>
+        <nav>
+            <div class="collapsible">
+                <button class="collapsible-header">
+                    <span class="arrow"></span> Software Projects
+                </button>
+                <div class="collapsible-content">
+                    <ul>
+                        <li class="tooltip-container">
+                            <a href="Dodge_Lasers/index.html">
+                                Dodge Lasers
+                                <span class="tooltip-text">Dodge lasers is a JavaScript game that uses the phaser library. Hold the spacebar to accelerate the craft upwards. Release to accelerate downwards due to gravity.</span>
+                            </a>
+                        </li>
+                        <li class="tooltip-container">
+                            <a href="dawatoma/index.html">
+                                dawatoma
+                                <span class="tooltip-text">dawatoma: A python package that allows the acceleration of creative tasks that often take place in a DAW.</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="collapsible">
+                <button class="collapsible-header">
+                    <span class="arrow"></span> Blog
+                </button>
+                <div class="collapsible-content">
+                    <ul>
+                        <li><a href="corporate_greed_blog/mid-stage-capitalism.html">Mid-Stage Capitalism</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible-header");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("header-active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+    </script>
 </body>
 </html>
